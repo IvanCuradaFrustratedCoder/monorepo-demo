@@ -30,7 +30,6 @@ export const TriangleAdmin: React.CSSProperties = {
 
 
 export function NavigationActiveItem(props: NavigationActiveItemProps) {
-
     switch (props.theme) {
         case 'admin':
             return (

@@ -37,8 +37,8 @@ export function App() {
 
     return (
         <div className='w-full m-0 p-0'>
-            <AppHeader theme={theme} logo={theme === 'admin' ? logo_memo_dark : logo_memo} logoAlt={logoAlt} user={userInfo}/>
-            <Navigation theme="admin" items={links} />
+            <AppHeader theme={theme} logo={theme === 'admin' ? logo_memo_dark :logo_memo} logoAlt={logoAlt} user={userInfo}/>
+            <Navigation theme={theme} items={links} />
             <Container>
                 <Title>Welcome, user!</Title>
                 <Subtitle>Here are the memos waiting for you</Subtitle>
