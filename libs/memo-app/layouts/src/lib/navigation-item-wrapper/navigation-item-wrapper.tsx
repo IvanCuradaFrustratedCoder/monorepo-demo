@@ -9,6 +9,7 @@ import NavigationInactiveItem from '../navigation-inactive-item/navigation-inact
 export interface NavigationItemWrapperProps {
     label: string;
     link: string;
+    theme?: string;
 }
 
 export function NavigationItemWrapper(props: NavigationItemWrapperProps) {
@@ -21,13 +22,25 @@ export function NavigationItemWrapper(props: NavigationItemWrapperProps) {
         setIsActive(isCurrent);
         return {};
     };
-    return (
-        <Link to={link} getProps={isCurrent} className="w-1/5 h-full flex items-center justify-center">
-            <li className="h-full w-full">
-                {isActive ? <NavigationActiveItem label={label} /> : <NavigationInactiveItem label={label} />}
-            </li>
-        </Link>
-    );
+
+    switch (props.theme) {
+        case 'admin':
+            return (
+                <Link to={link} getProps={isCurrent} className="w-1/5 h-full flex items-center justify-center">
+                    <li className="h-full w-full">
+                        {isActive ? <NavigationActiveItem theme={props.theme} label={label} /> : <NavigationInactiveItem label={label} />}
+                    </li>
+                </Link>
+            );
+        default:
+            return (
+                <Link to={link} getProps={isCurrent} className="w-1/5 h-full flex items-center justify-center">
+                    <li className="h-full w-full">
+                        {isActive ? <NavigationActiveItem label={label} /> : <NavigationInactiveItem label={label} />}
+                    </li>
+                </Link>
+            );
+    }
 }
 
 export default NavigationItemWrapper;

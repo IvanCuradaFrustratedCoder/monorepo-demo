@@ -25,10 +25,15 @@ module.exports = {
                 light: '#E9F0F7',
                 DEFAULT: '#5492C6',
                 dark: '#1352AB',
+                adminLight: '#2956B8',
+                adminDark: '#022F6F',
                 status: '#4288CB',
             },
             red: '#D62F5C',
-            yellow: '#D6A80C',
+            yellow:  {
+                DEFAULT: '#D6A80C',
+                adminYellow: '#E7BA64',
+            },
             green: '#6E9D45',
             gray: {
                 status: '#B5C0D2',

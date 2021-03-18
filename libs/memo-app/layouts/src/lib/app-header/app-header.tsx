@@ -22,7 +22,7 @@ export function AppHeader(props: AppHeaderProps) {
   switch (props.theme) {
     case 'admin': 
 		return (
-			<div className="bg-blue-dark text-white items-center px-4 flex justify-between" style={appHeaderStyles}>
+			<div className="bg-blue-adminDark text-white items-center px-4 flex justify-between" style={appHeaderStyles}>
 				<Branding logo={props.logo} alt={props.logoAlt}/>
 				<Profile theme={props.theme} user={props.user} />
 			</div>
