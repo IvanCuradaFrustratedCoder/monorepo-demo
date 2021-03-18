@@ -1,13 +1,18 @@
 {
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
-  "affected": { "defaultBase": "master" },
+  "affected": {
+    "defaultBase": "master"
+  },
   "npmScope": "monorepo-demo",
   "tasksRunnerOptions": {
     "default": {
@@ -21,8 +26,29 @@
     }
   },
   "projects": {
-    "demo": { "tags": [] },
-    "demo-e2e": { "tags": [], "implicitDependencies": ["demo"] },
-    "memo-app-layouts": { "tags": [] }
+    "demo": {
+      "tags": []
+    },
+    "demo-e2e": {
+      "tags": [],
+      "implicitDependencies": ["demo"]
+    },
+    "memo-app-layouts": {
+      "tags": []
+    },
+    "memo-app": {
+      "tags": []
+    },
+    "memo-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["memo-app"]
+    },
+    "memo-app-admin": {
+      "tags": []
+    },
+    "memo-app-admin-e2e": {
+      "tags": [],
+      "implicitDependencies": ["memo-app-admin"]
+    }
   }
 }
