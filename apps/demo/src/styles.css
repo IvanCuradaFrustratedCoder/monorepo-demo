@@ -2,3 +2,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face{
+    font-family: "FS Elliot Pro Regular";
+    src: url('./assets/fonts/FS-Elliot-Pro-Regular.otf')
+  }
+  @font-face{
+    font-family: "FS Elliot Pro Bold";
+    src: url('./assets/fonts/FS-Elliot-Pro-Bold.otf');
+  };
+  
+  body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #F4F8FC;
+};
+  
