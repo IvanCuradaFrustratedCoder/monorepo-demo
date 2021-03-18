@@ -1,123 +1,14 @@
 {
   "version": 2,
-  "cli": {
-    "defaultCollection": "@nrwl/react"
-  },
-  "defaultProject": "demo",
+  "cli": { "defaultCollection": "@nrwl/react" },
   "generators": {
     "@nrwl/react": {
-      "application": {
-        "style": "css",
-        "linter": "eslint",
-        "babel": true
-      },
-      "component": {
-        "style": "css"
-      },
-      "library": {
-        "style": "css",
-        "linter": "eslint"
-      }
+      "application": { "style": "css", "linter": "eslint", "babel": true },
+      "component": { "style": "css" },
+      "library": { "style": "css", "linter": "eslint" }
     }
   },
   "projects": {
-    "demo": {
-      "root": "apps/demo",
-      "sourceRoot": "apps/demo/src",
-      "projectType": "application",
-      "targets": {
-        "build": {
-          "executor": "@nrwl/web:build",
-          "outputs": ["{options.outputPath}"],
-          "options": {
-            "outputPath": "dist/apps/demo",
-            "index": "apps/demo/src/index.html",
-            "main": "apps/demo/src/main.tsx",
-            "polyfills": "apps/demo/src/polyfills.ts",
-            "tsConfig": "apps/demo/tsconfig.app.json",
-            "assets": ["apps/demo/src/favicon.ico", "apps/demo/src/assets"],
-            "styles": ["apps/demo/src/styles.css"],
-            "scripts": [],
-            "webpackConfig": "apps/demo/webpack.config.js"
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/demo/src/environments/environment.ts",
-                  "with": "apps/demo/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "executor": "@nrwl/web:dev-server",
-          "options": {
-            "buildTarget": "demo:build"
-          },
-          "configurations": {
-            "production": {
-              "buildTarget": "demo:build:production"
-            }
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["apps/demo/**/*.{ts,tsx,js,jsx}"]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/demo"],
-          "options": {
-            "jestConfig": "apps/demo/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "demo-e2e": {
-      "root": "apps/demo-e2e",
-      "sourceRoot": "apps/demo-e2e/src",
-      "projectType": "application",
-      "targets": {
-        "e2e": {
-          "executor": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/demo-e2e/cypress.json",
-            "tsConfig": "apps/demo-e2e/tsconfig.e2e.json",
-            "devServerTarget": "demo:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "demo:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["apps/demo-e2e/**/*.{js,ts}"]
-          }
-        }
-      }
-    },
     "memo-app-layouts": {
       "root": "libs/memo-app/layouts",
       "sourceRoot": "libs/memo-app/layouts/src",
@@ -188,13 +79,9 @@
         },
         "serve": {
           "executor": "@nrwl/web:dev-server",
-          "options": {
-            "buildTarget": "memo-app:build"
-          },
+          "options": { "buildTarget": "memo-app:build" },
           "configurations": {
-            "production": {
-              "buildTarget": "memo-app:build:production"
-            }
+            "production": { "buildTarget": "memo-app:build:production" }
           }
         },
         "lint": {
@@ -209,32 +96,6 @@
           "options": {
             "jestConfig": "apps/memo-app/jest.config.js",
             "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "memo-app-e2e": {
-      "root": "apps/memo-app-e2e",
-      "sourceRoot": "apps/memo-app-e2e/src",
-      "projectType": "application",
-      "targets": {
-        "e2e": {
-          "executor": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/memo-app-e2e/cypress.json",
-            "tsConfig": "apps/memo-app-e2e/tsconfig.e2e.json",
-            "devServerTarget": "memo-app:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "memo-app:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["apps/memo-app-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -288,13 +149,9 @@
         },
         "serve": {
           "executor": "@nrwl/web:dev-server",
-          "options": {
-            "buildTarget": "memo-app-admin:build"
-          },
+          "options": { "buildTarget": "memo-app-admin:build" },
           "configurations": {
-            "production": {
-              "buildTarget": "memo-app-admin:build:production"
-            }
+            "production": { "buildTarget": "memo-app-admin:build:production" }
           }
         },
         "lint": {
@@ -309,32 +166,6 @@
           "options": {
             "jestConfig": "apps/memo-app-admin/jest.config.js",
             "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "memo-app-admin-e2e": {
-      "root": "apps/memo-app-admin-e2e",
-      "sourceRoot": "apps/memo-app-admin-e2e/src",
-      "projectType": "application",
-      "targets": {
-        "e2e": {
-          "executor": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/memo-app-admin-e2e/cypress.json",
-            "tsConfig": "apps/memo-app-admin-e2e/tsconfig.e2e.json",
-            "devServerTarget": "memo-app-admin:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "memo-app-admin:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["apps/memo-app-admin-e2e/**/*.{js,ts}"]
           }
         }
       }
