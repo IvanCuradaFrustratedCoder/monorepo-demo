@@ -10,7 +10,7 @@ export interface AppHeaderProps {
 	logo: string;
 	logoAlt: string;
 	user: any;
-	children: React.ReactNode;
+	children?: React.ReactNode;
 }
 
 export const appHeaderStyles: React.CSSProperties = {
@@ -21,18 +21,19 @@ export const appHeaderStyles: React.CSSProperties = {
 export function AppHeader(props: AppHeaderProps) {
   switch (props.theme) {
     case 'admin': 
-      return (
-        <div className="bg-blue-dark items-center px-4 flex justify-between" style={appHeaderStyles}>
-          <Branding logo={props.logo} alt={props.logoAlt}/>
-        </div>
-      );
+		return (
+			<div className="bg-blue-dark text-white items-center px-4 flex justify-between" style={appHeaderStyles}>
+				<Branding logo={props.logo} alt={props.logoAlt}/>
+				<Profile theme={props.theme} user={props.user} />
+			</div>
+		);
     default:
-      return (
-        <div className="bg-white items-center px-4 flex justify-between" style={appHeaderStyles}>
-          <Branding logo={props.logo} alt={props.logoAlt}/>
-		  <Profile user={props.user} />
-        </div>
-      ); 
+		return (
+			<div className="bg-white items-center px-4 flex justify-between" style={appHeaderStyles}>
+				<Branding logo={props.logo} alt={props.logoAlt}/>
+				<Profile user={props.user} />
+			</div>
+		); 
   };
 }
 

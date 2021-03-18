@@ -16,6 +16,8 @@ export function Text(props: TextProps) {
         switch (color) {
             case 'secondary':
                 return 'text-gray-1';
+            case 'white': 
+                return 'text-white';
             default:
                 return 'text-normal';
         }
