@@ -1,12 +1,11 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 
 interface ISubtitleProps {
 	type?: string;
 	children: React.ReactNode;
 }
 
-const Subtitle: React.FunctionComponent<ISubtitleProps> = (props) => {
+export const Subtitle = (props: ISubtitleProps) => {
 	const { type } = props;
 	switch (type) {
 		case 'secondary':
@@ -17,9 +16,5 @@ const Subtitle: React.FunctionComponent<ISubtitleProps> = (props) => {
 	}
 };
 
-Subtitle.propTypes = {
-	type: PropTypes.string,
-	children: PropTypes.node,
-};
 
 export default Subtitle;

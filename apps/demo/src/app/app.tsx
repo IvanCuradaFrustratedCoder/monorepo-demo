@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './app.module.css';
-import { AppHeader } from '@monorepo-demo/memo-app/layouts';
+import { AppHeader, Title, Subtitle, Container } from '@monorepo-demo/memo-app/layouts';
 
 export function App() {
 
@@ -16,8 +16,11 @@ export function App() {
 
     return (
         <div className='w-full m-0 p-0'>
-            <AppHeader theme="admin" logo={myntLogo} logoAlt={logoAlt} user={userInfo}/>
-            <h1 className="text-lg font-bold font-regular">This is a demo app.</h1>
+            <AppHeader logo={myntLogo} logoAlt={logoAlt} user={userInfo}/>
+            <Container>
+                <Title>My Memos</Title>
+                <Subtitle>See memos here</Subtitle>
+            </Container>
         </div>
     );
 }

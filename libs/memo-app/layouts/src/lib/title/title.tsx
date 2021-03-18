@@ -1,5 +1,4 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 
 interface ITitleProps {
     type?: string;
@@ -7,7 +6,7 @@ interface ITitleProps {
     children: React.ReactNode;
 }
 
-const Title: React.FunctionComponent<ITitleProps> = (props) => {
+export const Title = (props: ITitleProps) =>  {
     const { type, color } = props;
     const getTextColor = (color: string | undefined) => {
         switch (color) {
@@ -29,12 +28,6 @@ const Title: React.FunctionComponent<ITitleProps> = (props) => {
         default:
             return <h1 className={`font-bold ${getTextColor(color)} w-auto text-4xl`}>{props.children}</h1>;
     }
-};
-
-Title.propTypes = {
-    type: PropTypes.string,
-    color: PropTypes.oneOf(['primary', 'secondary']),
-    children: PropTypes.node,
 };
 
 export default Title;
